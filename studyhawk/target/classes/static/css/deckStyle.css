@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+header nav {
+    background-color: #b61e2e;
+    z-index: 9999;
+}
+
+header nav .logo {
+    color: white;
+}
+
+header .navbar-brand {
+    font-family: 'roboto';
+    font-style: italic;
+    color: white;
+    font-size: 40px;
+}
+
+header .navbar-brand:hover {
+    color: white;
+}
+
+header .navbar-brand:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.main-page {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 85px;
+    bottom: 0;
+}
+
+.deck-label {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.decks {
+    background-color: lightgray;
+    padding: 0;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 65%;
+    border-radius: 25px;
+    /*-webkit-border-radius:;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+     */
+    -webkit-border-radius: 25px;
+}
+
+.decks:hover {
+    background-color: rgb(188, 188, 188);
+}
+
+.decks hr {
+    border: solid 1px #808080;
+}
+
+.form-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-form-label {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+}
+
+.add-button {
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.add-button button {
+    background-color: lightgray;
+    color: black;
+    border-style: none;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.add-button button:hover {
+    background-color: gray;
+    color: black;
+    border-style: none;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#deck-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.decks .title {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 5px;
+    margin-top: 10px;
+    /*visibility: hidden;*/
+}
+
+.decks .description {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 5px;
+    margin-top: 10px;
+    max-height: 300px; /* Collapsed initially */ /* Changed temporarily to work on decks */
+    overflow: hidden; /* Hide content when collapsed */
+    transition: max-height 0.3s ease-out; /* Smooth slide transition */
+}
+
+.decks.open .description {
+    max-height: 100px; /* Or adjust to match the height of your content */
+}
+
+.decks .deckbtn {
+    background-color: lightgray;
+    color: black;
+    border-style: 1px solid black;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 25px;
+    float: right;
+}
+
+.decks .deckbtn:hover {
+    background-color: rgb(177, 177, 177);
+}
+
+.decks .favoritespan {
+    margin-left: 5px;
+    float: right;
+    padding: 0;
+    margin: 0;
+    margin-right: 15px;
+    margin-top: 17px;
+    scale: 2;
+}
+
+.decks .favoritespan:hover {
+    color: rgb(155, 132, 19);
+}
+
+.checked {
+    color: rgb(255,215,0) !important;
+}
+
+.no-decks-div {
+    padding: 10;
+    text-align: center;
+}
+
+#share-container {
+    width: 400px;
+    height: 300px;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -100%); /* Start above the viewport */
+    background-color: rgba(49, 49, 49, 0.925); /* Semi-transparent background */
+    border: 1px solid black;
+    display: flex;
+    margin: auto;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+#share-container h1 {
+    color: white;
+    text-align: center;
+    font-family: 'roboto';
+}
+
+#share-container #username {
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 100%;
+    height: 50px;
+    font-size:x-large;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#share-container #sharedsubmitbtn {
+    border-radius: 25px;
+    padding: 5px;
+}
+
+#share-container #sharedcancelbtn {
+    margin-left: 150px;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+#container {
+    width: 400px;
+    height: 300px;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -100%); /* Start above the viewport */
+    background-color: rgba(49, 49, 49, 0.925); /* Semi-transparent background */
+    border: 1px solid black;
+    display: flex;
+    margin: auto;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+#container h1 {
+    color: white;
+    text-align: center;
+    font-family: 'roboto';
+}
+
+#container #title{
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 100%;
+    height: 50px;
+    font-size:x-large;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#container #description{
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 100%;
+    height: 50px;
+    font-size:x-large;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#container #submitbtn {
+    border-radius: 25px;
+    padding: 5px;
+}
+
+#container #cancelbtn {
+    margin-left: 150px;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+footer .footer-content{
+    background-color: #b61e2e;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
