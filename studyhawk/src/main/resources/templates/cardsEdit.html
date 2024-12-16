@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="images/Study-Hawk-Favicon.ico">
+        <link rel="stylesheet" href="/../static/css/cardEditStyle.css" th:href="@{/css/cardEditStyle.css}">
+        <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Study Hawk | Edit Deck</title>
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <!--bootstrap-->
+        <script type="text/javascript" src="/js/cardsEdit.js"></script>
+    </head>
+    <body onload="loadPage()">
+        <!--bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!--bootstrap-->
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="text-bg-body-primary">
+                    <img src="/images/Study-Hawk-Hawk.svg" alt="Logo" height="75px">
+                    <a class="navbar-brand" href="#studyHawkLogo"><u><b>Study Hawk</b></u></a>
+                </div>
+            </nav> 
+        </header>
+        <!--Bread Crumbs-->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#home">Home</a></li>
+                <li class="breadcrumb-item"><a href="http://localhost:8080/decks">Decks</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Edit Deck</li>
+            </ol>
+        </nav>
+        <!--Bread Crumbs-->
+        <div>
+            <h1 id="deck-title-label">Edit Deck</h1>
+        </div>
+        <!--Body Content-->
+        <div id="body-content">
+            <div class="deck-data">
+                <input id="deck-title" type="text" value="" placeholder="Title">
+                <br>
+                <input id="deck-description" type="text" value="" placeholder="Description">
+                <br>
+                <select>
+                    <option value="CSE-201">CSE 201</option>
+                    <option value="CSE-274">CSE 274</option>
+                    <option value="CSE-374">CSE 374</option>
+                    <option value="CSE-202">CSE 202</option>
+                    <option value="CSE-385">CSE 385</option>
+                </select>
+            </div>
+            <!--Card Edit Object-->
+            <div id="editor-container">
+                
+            </div>
+            <!--Card Edit Object-->
+        </div>
+        <div class="new-card-btn">
+            <input type="button" value="New Card" onclick="addCard()">
+            <input type="button" value="Save Changes" onclick="saveChanges()">
+            <p id="changes-saved-label">Your changes are saved</p>
+        </div>
+        <!--Body Content-->
+    </body>
+</html>
